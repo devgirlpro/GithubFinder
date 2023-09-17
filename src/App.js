@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './Components/Navbar';
-import UserItem from './Users/UserItem';
+import Users from './Users/Users';
 import './App.css';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <React.Fragment>
       <div className='App'>
         <Navbar title="Github Finder" icon="fa-brands fa-github" />
-        <UserItem />
+        <Users />
       </div>
     </React.Fragment>
   );
