@@ -1,22 +1,25 @@
 import React from 'react';
-import propTypes, { number } from 'prop-types';
+import propTypes from 'prop-types';
 
-function Navbar(props) {
+const Navbar = (props) => {
     const defaultProps = {
         title: 'Github Finder',
         icon: 'fa-brands fa-github',
     };
     return (
         <nav className='navbar bg-primary'>
-            <i className={props.icon || defaultProps.icon}>
-                {' '}
+            <h1>
+                <i className={props.icon || defaultProps.icon} />
                 {props.title || defaultProps.title}
-                {''}
-                {''}
-            </i>
+            </h1>
         </nav>
     );
-}
+};
+
+Navbar.propTypes = {
+    title: propTypes.string,
+    icon: propTypes.string,
+};
 
 Navbar.propTypes = {
     title: propTypes.string.isRequired,

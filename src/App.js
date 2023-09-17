@@ -9,7 +9,10 @@ function App() {
     <React.Fragment>
       <div className='App'>
         <Navbar title="Github Finder" icon="fa-brands fa-github" />
-        <Users />
+        <div className='container'>
+          <Users />
+        </div>
+
       </div>
     </React.Fragment>
   );

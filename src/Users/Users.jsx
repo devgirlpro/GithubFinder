@@ -1,7 +1,7 @@
 import React from 'react';
 import UserItem from './UserItem';
 
-function Users() {
+const Users = () => {
     const users = [
         {
             id: '1',
@@ -24,12 +24,18 @@ function Users() {
     ];
 
     return (
-        <div>
+        <div style={userStyle}>
             {users.map((user) => (
                 <UserItem key={user.id} user={user} />
             ))}
         </div>
     );
-}
+};
+
+const userStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridGap: '1rem',
+};
 
 export default Users;
